@@ -1,0 +1,27 @@
+version: '3.5'  
+
+services: 
+    front-end: 
+      ports: 
+        - 5000:5000 
+      build: ./dock1.10
+    back-end:
+      ports:
+        - 8000:8000
+      build: ./docks
+      environment: 
+        - REDIS=redis
+        - REDIS_PORT=6379
+        - DB_USERNAME=postgres
+        - DB_PASSWORD=kissa123
+        - DB_NAME=postgres
+        - DB_HOST=weid
+      depends_on:
+        - weid
+    redis:
+      image: redis
+    weid:
+      image: postgres
+      restart: unless-stopped
+      environment:
+        POSTGRES_PASSWORD: kissa123

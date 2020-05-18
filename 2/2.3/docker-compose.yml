@@ -1,0 +1,11 @@
+version: '3.5'  
+
+services: 
+    front-end: 
+      ports: 
+        - 5000:5000 
+      build:  ./dock1.10
+    back-end:
+      ports:
+        - 8000:8000
+      build:  ./docks

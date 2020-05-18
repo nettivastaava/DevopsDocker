@@ -1,0 +1,2 @@
+:~/Docker/2.4/scaling-exercise$ sudo docker-compose up -d --scale compute=3
+
