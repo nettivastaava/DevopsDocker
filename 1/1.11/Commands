@@ -1,0 +1,5 @@
+:~$ sudo docker run -it -p 8000:8000 -v $(pwd)/docks/backend-example-docker:/appsi/backend-example-docker 87a
+
+
+logs.txt:
+5/11/2020, 3:53:47 PM: Connection received in root

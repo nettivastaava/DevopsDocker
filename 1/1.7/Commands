@@ -1,0 +1,8 @@
+
+
+Commands:
+:~/Docker/1.07$ sudo docker build -t curler
+...
+:~/Docker/1.07$ sudo docker run -it curler
+
+

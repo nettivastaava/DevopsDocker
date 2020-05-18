@@ -1,0 +1,4 @@
+
+Command:
+wade@mylly:~/Docker/1.13$ sudo docker run -it -p 8080:8080 6d8
+

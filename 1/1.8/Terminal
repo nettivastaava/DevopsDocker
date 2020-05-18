@@ -1,0 +1,22 @@
+:~$ sudo docker run devopsdockeruh/first_volume_exercise
+(node:1) ExperimentalWarning: The fs.promises API is experimental
+Wrote to file /usr/app/logs.txt
+:~$ sudo docker ps -a
+CONTAINER ID        IMAGE                                   COMMAND                   CREATED             STATUS                      PORTS               NAMES
+a667247816e4        devopsdockeruh/first_volume_exercise    "node index"              24 seconds ago      Exited (0) 11 seconds ago                       brave_shockley
+:~$ sudo docker cp "a66://usr/app/" .
+:~$ sudo docker run -v app:/usr/app devopsdockeruh/first_volume_exercise
+(node:1) ExperimentalWarning: The fs.promises API is experimental
+Wrote to file /usr/app/logs.txt
+Wrote to file /usr/app/logs.txt
+Wrote to file /usr/app/logs.txt
+Wrote to file /usr/app/logs.txt
+:~$ cat app/logs.txt
+Sun, 10 May 2020 14:58:03 GMT
+Sun, 10 May 2020 14:58:06 GMT
+Sun, 10 May 2020 14:58:09 GMT
+Sun, 10 May 2020 14:58:12 GMT
+Secret message is:
+"Volume bind mount is easy"
+
+

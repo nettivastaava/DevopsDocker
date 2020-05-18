@@ -1,0 +1,22 @@
+:~$ sudo docker run -it ubuntu
+root@5e0aec2828e8:/# apt-get update 
+Get:1 http://archive.ubuntu.com/ubuntu focal InRelease [265 kB]
+Get:2 http://security.ubuntu.com/ubuntu focal-security InRelease [107 kB]
+etc.
+root@5e0aec2828e8:/# apt-get install -y curl
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+etc.
+root@5e0aec2828e8:/# sh -c 'echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website;'
+Input website:
+helsinki.fi
+Searching..
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="http://www.helsinki.fi/">here</a>.</p>
+</body></html>
+
